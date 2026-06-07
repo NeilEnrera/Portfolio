@@ -1,0 +1,34 @@
+<section id="certifications" class="py-20 md:py-28 bg-slate-50">
+  <div class="section-container">
+    <div class="text-center max-w-2xl mx-auto mb-16">
+      <span class="text-accent font-semibold text-sm tracking-widest uppercase">Certifications</span>
+      <h2 class="text-3xl md:text-4xl font-bold text-navy-900 mt-3 mb-4">
+        Professional Credentials
+      </h2>
+      <p class="text-slate-600">
+        Industry-recognized certifications demonstrating technical expertise and continuous learning.
+      </p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      @for (cert of data.certifications; track cert.title) {
+        <div class="p-5 rounded-xl bg-white border border-slate-200 shadow-sm card-hover">
+          @if (cert.image) {
+            <div class="w-full h-28 rounded-lg bg-slate-50 border border-slate-100 overflow-hidden mb-3 flex items-center justify-center p-2">
+              <img [src]="cert.image" [alt]="cert.title" class="w-full h-full object-contain" loading="lazy" (error)="$event.target.style.display='none'">
+            </div>
+          } @else {
+            <div class="w-10 h-10 rounded-lg bg-accent/10 flex items-center justify-center mb-3">
+              <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+              </svg>
+            </div>
+          }
+          <h3 class="text-sm font-bold text-navy-900 mb-1 leading-snug">{{ cert.title }}</h3>
+          <p class="text-xs text-accent font-medium mb-1">{{ cert.issuer }}</p>
+          <p class="text-xs text-slate-500">{{ cert.description }}</p>
+        </div>
+      }
+    </div>
+  </div>
+</section>
