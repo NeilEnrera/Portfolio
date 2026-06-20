@@ -19,13 +19,22 @@
         </div>
       </div>
 
-      <div class="grid grid-cols-2 gap-4">
-        @for (item of data.highlights; track item.label) {
-          <div class="p-6 rounded-xl bg-slate-50 border border-slate-200 text-center shadow-xs card-hover">
-            <p class="text-3xl font-bold text-accent">{{ item.value }}{{ item.suffix }}</p>
-            <p class="text-sm text-slate-500 mt-1">{{ item.label }}</p>
-          </div>
-        }
+      <div class="space-y-6">
+        <span class="text-accent font-semibold text-sm tracking-widest uppercase block mb-2">How I Work</span>
+        <div class="relative pl-8 space-y-6">
+          <div class="absolute left-[11px] top-2 bottom-0 w-0.5 bg-slate-200"></div>
+          @for (step of processSteps; track step.title) {
+            <div class="relative">
+              <div class="absolute -left-8 top-0 w-6 h-6 rounded-full bg-white border-2 border-accent flex items-center justify-center text-xs font-bold text-accent">
+                {{ $index + 1 }}
+              </div>
+              <div>
+                <h3 class="font-bold text-navy-900">{{ step.title }}</h3>
+                <p class="text-sm text-slate-600 mt-1 leading-relaxed">{{ step.description }}</p>
+              </div>
+            </div>
+          }
+        </div>
       </div>
     </div>
   </div>

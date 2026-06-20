@@ -4,13 +4,6 @@ export const portfolio = {
   heroHeadline: 'Transforming Business Processes Into Scalable Digital Systems',
   heroSubtext: 'Full Stack Developer focused on designing and building efficient business solutions through system analysis, architecture planning, and modern web technologies.',
 
-  highlights: [
-    { label: 'Projects Completed', value: 5, suffix: '+' },
-    { label: 'Technologies Used', value: 25, suffix: '+' },
-    { label: 'Certifications Earned', value: 9, suffix: '' },
-    { label: 'Years Experience', value: 3, suffix: '+ Years' }
-  ],
-
   about: {
     objective: 'BS Information Technology student with experience in software development, system analysis, database management, and workflow optimization. Passionate about transforming manual processes into efficient digital solutions.',
     details: 'Experienced in designing business systems, mobile applications, embedded system projects, and database-driven platforms. I approach every project by first understanding the underlying business processes, identifying pain points, and then designing solutions that scale. Passionate about leveraging AI and agentic workflows to accelerate development and build smarter systems.'
@@ -70,7 +63,7 @@ export const portfolio = {
       organization: 'JDE Work of Our Hands',
       role: 'Lead Developer',
       category: 'Business Management System',
-      image: '/images/projects/tailoring-system.jpg',
+      image: 'images/projects/tailoring-system.jpg',
       summary: 'A comprehensive order management platform that digitizes the entire tailoring business workflow.',
       problem: 'The tailoring business relied on manual paper-based records for appointments, orders, payments, and customer communication. This led to lost orders, scheduling conflicts, delayed deliveries, and difficulty tracking business performance.',
       solution: 'Designed and developed a web-based system that centralizes all business operations into a single platform, automating appointment scheduling, order tracking, payment monitoring, and customer communication.',
@@ -99,7 +92,7 @@ export const portfolio = {
       title: 'CashTrack: Expense Tracker',
       role: 'Mobile Application Developer',
       category: 'Personal Finance Application',
-      image: '/images/projects/budgetify.jpg',
+      image: 'images/projects/budgetify.jpg',
       summary: 'A personal finance management app that helps users track expenses and manage budgets.',
       problem: 'Individuals lack simple, effective tools to track daily expenses and maintain budget discipline, leading to poor financial management.',
       solution: 'Created a mobile expense tracking application with data visualization, budget management, and financial monitoring features.',
@@ -119,7 +112,7 @@ export const portfolio = {
       organization: 'Earthquake Detection for Establishments',
       role: 'Embedded Systems Developer',
       category: 'Embedded System',
-      image: '/images/projects/seismic-monitor.jpg',
+      image: 'images/projects/seismic-monitor.jpg',
       summary: 'An affordable earthquake detection system combining hardware sensors with software monitoring.',
       problem: 'Small establishments lack access to affordable earthquake detection and monitoring systems to provide early warnings.',
       solution: 'Built a DIY seismic monitoring system using cost-effective sensors integrated with custom software for real-time detection and alerts.',
@@ -139,7 +132,7 @@ export const portfolio = {
       organization: 'Adoption and Lost & Found System for Stray Animals',
       role: 'Developer',
       category: 'Database Management System',
-      image: '/images/projects/here-pawr-you.jpg',
+      image: 'images/projects/here-pawr-you.jpg',
       summary: 'A community platform connecting stray animals with adopters and reuniting lost pets with owners.',
       problem: 'Stray animals lack a centralized platform for adoption facilitation and lost-and-found reporting, making it difficult for communities to coordinate care.',
       solution: 'Developed a database-driven web platform with comprehensive user management, animal profiles, and matching algorithms.',
@@ -160,31 +153,26 @@ export const portfolio = {
     {
       title: 'Entity Relationship Diagrams',
       description: 'Comprehensive ERDs showing database structure, relationships, and normalization for business systems.',
-      image: '/images/system-design/erds.jpg',
       items: ['Logical data models', 'Physical schema designs', 'Relationship mapping', 'Normalization documentation']
     },
     {
       title: 'System Architecture Diagrams',
       description: 'High-level architecture views showing component interactions, data flow, and system boundaries.',
-      image: '/images/system-design/architecture.jpg',
       items: ['Layered architecture designs', 'Component interaction diagrams', 'Deployment topology', 'API structure maps']
     },
     {
       title: 'Workflow & Process Maps',
       description: 'Detailed process flows showing business operations, decision points, and system interactions.',
-      image: '/images/system-design/workflow.jpg',
       items: ['Business process flows', 'User journey maps', 'System interaction diagrams', 'Decision trees']
     },
     {
       title: 'User Flow & Wireframes',
       description: 'User-centered design artifacts showing navigation patterns, screen layouts, and interaction design.',
-      image: '/images/system-design/wireframes.jpg',
       items: ['User flow diagrams', 'Wireframe prototypes', 'Screen mockups', 'Navigation maps']
     },
     {
       title: 'Use Case & Requirements',
       description: 'Structured requirements documentation capturing functional needs, system boundaries, and actor interactions.',
-      image: '/images/system-design/use-cases.jpg',
       items: ['Use case specifications', 'Activity diagrams', 'Requirement traceability', 'Stakeholder analysis']
     }
   ],
@@ -193,55 +181,55 @@ export const portfolio = {
     {
       title: 'CCNA (Cisco Certified Network Associate)',
       issuer: 'Cisco Networking Academy',
-      image: '/images/certifications/ccna.jpg',
+      image: 'images/certifications/Enrera_Neil_Networking_Basics(CiscoNetworkingAcademy)_page-0001.jpg',
       description: 'Networking fundamentals, routing, switching, and network security.'
     },
     {
       title: 'Alibaba Cloud Big Data Associate',
       issuer: 'Alibaba Cloud',
-      image: '/images/certifications/alibaba-big-data.jpg',
+      image: 'images/certifications/alibaba-big-data.png',
       description: 'Big data processing, storage, and analytics on cloud infrastructure.'
     },
     {
       title: 'ECS Fundamentals',
       issuer: 'Alibaba Cloud',
-      image: '/images/certifications/alibaba-ecs.jpg',
+      image: 'images/certifications/alibaba-ecs.png',
       description: 'Elastic Compute Service configuration and management.'
     },
     {
       title: 'SLB Fundamentals',
       issuer: 'Alibaba Cloud',
-      image: '/images/certifications/alibaba-slb.jpg',
+      image: 'images/certifications/alibaba-slb.png',
       description: 'Server Load Balancer implementation and optimization.'
     },
     {
       title: 'Auto Scaling Fundamentals',
       issuer: 'Alibaba Cloud',
-      image: '/images/certifications/alibaba-auto-scaling.jpg',
+      image: 'images/certifications/alibaba-auto-scaling.png',
       description: 'Automated scaling strategies for cloud resources.'
     },
     {
       title: 'OSS Fundamentals',
       issuer: 'Alibaba Cloud',
-      image: '/images/certifications/alibaba-oss.jpg',
+      image: 'images/certifications/alibaba-oss.png',
       description: 'Object Storage Service architecture and best practices.'
     },
     {
       title: 'ApsaraDB RDS Fundamentals',
       issuer: 'Alibaba Cloud',
-      image: '/images/certifications/alibaba-rds.jpg',
+      image: 'images/certifications/alibaba-rds.png',
       description: 'Relational Database Service management on Alibaba Cloud.'
     },
     {
       title: 'IoT Foundations: Operating Systems Fundamentals',
       issuer: 'IoT Academy',
-      image: '/images/certifications/iot-foundations.jpg',
+      image: 'images/certifications/CertificateOfCompletion_IoT Foundations Operating Systems Fundamentals_pages-to-jpg-0001.jpg',
       description: 'Operating system concepts for IoT device development.'
     },
     {
       title: 'Vibe Code and Agentic Coding',
       issuer: 'AI Seminar',
-      image: '/images/certifications/vibe-code.jpg',
+      image: 'images/certifications/vibe-code-agentic-coding.png',
       description: 'Modern AI-assisted development techniques including agentic workflows, prompt engineering, and AI-powered coding practices.'
     }
   ],
@@ -259,13 +247,14 @@ export const portfolio = {
 
   resume: {
     file: '/resume/Neil_Enrera_CV.pdf',
-    label: 'Download Resume'
+    label: 'View Resume'
   },
 
   contact: {
     email: 'neilandreienrera@gmail.com',
     github: 'https://github.com/NeilEnrera',
-    linkedin: 'https://linkedin.com/in/andreicalo',
-    facebook: 'https://www.facebook.com/neilxbzjsj/'
+    linkedin: 'https://www.linkedin.com/in/neil-andrei-enrera-41339b288/',
+    facebook: 'https://www.facebook.com/neilxbzjsj/',
+    formAction: ''
   }
 };

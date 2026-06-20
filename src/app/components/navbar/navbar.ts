@@ -86,4 +86,5 @@ export class NavbarComponent implements OnDestroy {
       el.scrollIntoView({ behavior: 'smooth' });
     }
   }
+
 }

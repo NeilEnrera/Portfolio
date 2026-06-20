@@ -10,8 +10,8 @@
       </p>
     </div>
 
-    <div class="grid lg:grid-cols-2 gap-12 max-w-4xl mx-auto">
-      <div class="space-y-6">
+    <div class="max-w-2xl mx-auto">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         @for (item of [
           { icon: 'mail', label: 'Email', value: data.contact.email, href: 'mailto:' + data.contact.email },
           { icon: 'github', label: 'GitHub', value: 'github.com/NeilEnrera', href: data.contact.github },
@@ -42,91 +42,6 @@
               <p class="text-sm font-medium group-hover:text-accent-light transition-colors">{{ item.value }}</p>
             </div>
           </a>
-        }
-      </div>
-
-      <div>
-        @if (!submitted()) {
-          <form #contactForm="ngForm" (ngSubmit)="onSubmit()" class="space-y-4">
-            <div>
-              <label class="block text-sm font-medium text-slate-300 mb-1.5">Name</label>
-              <input
-                type="text"
-                [ngModel]="form.name()"
-                (ngModelChange)="form.name.set($event)"
-                name="name"
-                required
-                #nameInput="ngModel"
-                placeholder="Your name"
-                class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors text-sm"
-              >
-              @if (nameInput.invalid && nameInput.touched) {
-                <p class="text-red-400 text-xs mt-1">Name is required</p>
-              }
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-slate-300 mb-1.5">Email</label>
-              <input
-                type="email"
-                [ngModel]="form.email()"
-                (ngModelChange)="form.email.set($event)"
-                name="email"
-                required
-                email
-                #emailInput="ngModel"
-                placeholder="your@email.com"
-                class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors text-sm"
-              >
-              @if (emailInput.invalid && emailInput.touched) {
-                @if (emailInput.errors?.['required']) {
-                  <p class="text-red-400 text-xs mt-1">Email is required</p>
-                }
-                @if (emailInput.errors?.['email']) {
-                  <p class="text-red-400 text-xs mt-1">Enter a valid email address</p>
-                }
-              }
-            </div>
-            <div>
-              <label class="block text-sm font-medium text-slate-300 mb-1.5">Message</label>
-              <textarea
-                [ngModel]="form.message()"
-                (ngModelChange)="form.message.set($event)"
-                name="message"
-                required
-                rows="4"
-                #messageInput="ngModel"
-                placeholder="Tell me about your project or opportunity..."
-                class="w-full px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 focus:outline-none focus:border-accent focus:ring-1 focus:ring-accent transition-colors text-sm resize-none"
-              ></textarea>
-              @if (messageInput.invalid && messageInput.touched) {
-                <p class="text-red-400 text-xs mt-1">Message is required</p>
-              }
-            </div>
-            <button
-              type="submit"
-              [disabled]="contactForm.invalid"
-              class="w-full px-6 py-3.5 bg-accent text-white font-semibold rounded-xl hover:bg-accent-dark transition-colors disabled:opacity-50 disabled:cursor-not-allowed shadow-lg shadow-accent/20 cursor-pointer text-sm"
-            >
-              Send Message
-            </button>
-          </form>
-        } @else {
-          <div class="p-8 rounded-xl bg-white/10 text-center animate-fade-in-up">
-            <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Message Sent!</h3>
-            <p class="text-slate-300 text-sm">Thank you for reaching out. I'll get back to you soon.</p>
-            <button
-              type="button"
-              (click)="resetForm()"
-              class="mt-4 px-4 py-2 text-sm text-accent-light border border-accent-light/30 rounded-lg hover:bg-accent-light/10 transition-colors cursor-pointer"
-            >
-              Send Another
-            </button>
-          </div>
         }
       </div>
     </div>
